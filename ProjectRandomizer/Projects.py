@@ -1,3 +1,4 @@
+import random
 def generate_list(projects):
     '''
     It generates a list from 'ProjectList.txt' which makes a list
@@ -57,7 +58,18 @@ def removes(remove_line, projects):
                 continue
             projects.remove(remove_line)
         f.truncate()
-        
+def display_random_project(projects):
+    '''
+    Displays the random project so I can code a random coding project every weekend
+
+    Parameters:
+        projects - the list of projects to choose from
+
+    Returns:
+        None
+    '''
+    print(random.choice(projects))
+
 def main():
     projects = []
     generate_list(projects)
@@ -73,7 +85,7 @@ def main():
                 remove_line = input("Enter what you want to remove: ")
                 removes(remove_line, projects)
             case 3:
-                print(projects)
+                display_random_project(projects)
             case 4:
                 break
 
