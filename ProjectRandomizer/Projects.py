@@ -12,11 +12,11 @@ def generate_list(projects):
     try:
         text_file = open("ProjectRandomizer/ProjectLists.txt", "r")
         for line in text_file:
-            projects.append(line)
+            projects.append(line.strip())
     except:
         text_file = open("ProjectLists.txt", "x")
 
-def add():
+def add(projects):
     '''
     It adds to 'ProjectsLists.txt' so that it is able to be written in without
     needing to enter the file.
@@ -31,18 +31,33 @@ def add():
     try:
         text_file = open("ProjectRandomizer/ProjectLists.txt", "a")
         text_file.write(add_project + "\n")
+        projects.append(add_project)
     except:
         text_file = open("ProjectLists.txt", "x")
 
-def remove(remove_line):
+def removes(remove_line, projects):
+    '''
+    It removes from project from the list and removes it from the text file
+    'ProjectsLists.txt'
+
+    Parameters:
+        remove_line - the project you want to remove
+        projects - the list that holds the projects
+
+    Returns:
+        None
+    '''
     print("remove")
     with open("ProjectRandomizer/ProjectLists.txt", "r+") as f:
         d = f.readlines()
         f.seek(0)
         for i in d:
-            if i != remove_line + "\n":
+            if i.strip("\n") != remove_line:
                 f.write(i)
+                continue
+            projects.remove(remove_line)
         f.truncate()
+        
 def main():
     projects = []
     generate_list(projects)
@@ -52,10 +67,11 @@ def main():
         match num:
             case 1:
                 print(projects)
-                add()
+                add(projects)
             case 2:
-                print(2)
-                remove("Amongus")
+                print(projects)
+                remove_line = input("Enter what you want to remove: ")
+                removes(remove_line, projects)
             case 3:
                 print(projects)
             case 4:
