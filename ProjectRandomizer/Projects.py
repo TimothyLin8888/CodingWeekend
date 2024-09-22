@@ -49,15 +49,21 @@ def removes(remove_line, projects):
         None
     '''
     print("remove")
-    with open("ProjectRandomizer/ProjectLists.txt", "r+") as f:
-        d = f.readlines()
-        f.seek(0)
-        for i in d:
-            if i.strip("\n") != remove_line:
-                f.write(i)
-                continue
-            projects.remove(remove_line.title())
-        f.truncate()
+    try:
+        with open("ProjectRandomizer/ProjectLists.txt", "r+") as f:
+            d = f.readlines()
+            f.seek(0)
+            for i in d:
+                if i.strip("\n") != remove_line:
+                    f.write(i)
+                    continue
+                try:
+                    projects.remove(remove_line.title())
+                except:
+                    print("It isn't removed for a reason")
+            f.truncate()
+    except:
+        print("Can't read the file")
 def display_random_project(projects):
     '''
     Displays the random project so I can code a random coding project every weekend
@@ -75,7 +81,11 @@ def main():
     generate_list(projects)
     while True:
         print("1) Add to the list of projects\n2) Remove from list of projects\n3) Choosing random project\n4) Displays the projects\n5) Break the loop")
-        num = int(input())
+        try:
+            num = int(input("Enter the number: "))
+        except:
+            print("Enter a number please")
+            continue
         match num:
             case 1:
                 print(projects)
