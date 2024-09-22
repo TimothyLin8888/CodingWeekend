@@ -1,6 +1,4 @@
 Calculator
 Blackjack
-Small gameCalculator
-Garfield
-Calculator
-Calculator
+Amongus
+Small game
