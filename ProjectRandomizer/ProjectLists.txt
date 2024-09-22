@@ -1,3 +1,4 @@
 Calculator
 Blackjack
-Small game
+Small Game
+Personal Finance Tracker

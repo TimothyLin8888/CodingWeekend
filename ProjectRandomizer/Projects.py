@@ -31,8 +31,8 @@ def add(projects):
     add_project = input("What do you want to add?\n")
     try:
         text_file = open("ProjectRandomizer/ProjectLists.txt", "a")
-        text_file.write(add_project + "\n")
-        projects.append(add_project)
+        text_file.write(add_project.title() + "\n")
+        projects.append(add_project.title())
     except:
         text_file = open("ProjectLists.txt", "x")
 
@@ -56,7 +56,7 @@ def removes(remove_line, projects):
             if i.strip("\n") != remove_line:
                 f.write(i)
                 continue
-            projects.remove(remove_line)
+            projects.remove(remove_line.title())
         f.truncate()
 def display_random_project(projects):
     '''
@@ -74,7 +74,7 @@ def main():
     projects = []
     generate_list(projects)
     while True:
-        print("1) Add to the list of projects\n2) Remove from list of projects\n3) Choosing random project\n4) Break the loop")
+        print("1) Add to the list of projects\n2) Remove from list of projects\n3) Choosing random project\n4) Displays the projects\n5) Break the loop")
         num = int(input())
         match num:
             case 1:
@@ -87,6 +87,8 @@ def main():
             case 3:
                 display_random_project(projects)
             case 4:
+                print(projects)
+            case 5:
                 break
 
 main()
