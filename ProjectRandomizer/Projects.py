@@ -48,7 +48,6 @@ def removes(remove_line, projects):
     Returns:
         None
     '''
-    print("remove")
     try:
         with open("ProjectRandomizer/ProjectLists.txt", "r+") as f:
             d = f.readlines()
