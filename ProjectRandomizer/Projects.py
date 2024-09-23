@@ -11,9 +11,9 @@ def generate_list(projects):
         None
     '''
     try:
-        text_file = open("ProjectRandomizer/ProjectLists.txt", "r")
-        for line in text_file:
-            projects.append(line.strip())
+        with open("ProjectRandomizer/ProjectLists.txt", "r") as text_file:
+            for line in text_file:
+                projects.append(line.strip())
     except:
         text_file = open("ProjectLists.txt", "x")
 
@@ -30,8 +30,8 @@ def add(projects):
     '''
     add_project = input("What do you want to add?\n")
     try:
-        text_file = open("ProjectRandomizer/ProjectLists.txt", "a")
-        text_file.write(add_project.title() + "\n")
+        with open("ProjectRandomizer/ProjectLists.txt", "a") as text_file:
+            text_file.write(add_project.title() + "\n")
         projects.append(add_project.title())
     except:
         text_file = open("ProjectLists.txt", "x")
