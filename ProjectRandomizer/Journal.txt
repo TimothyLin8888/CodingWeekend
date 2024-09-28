@@ -1,0 +1,8 @@
+This is a journal to document me making each project:
+
+9/22/2024 - Created the ProjectRandomizer to start working on small projects during the weekends
+            Created lots of functions and a list of projects to add
+            (Created this txt file on 9/28/2024 so not much to say here, just here to document when I made this)
+
+9/28/2024 - Created additional functions like completed so I can complete projects with dates on when I completed them
+            

@@ -1,21 +1,25 @@
 import random
-def generate_list(projects):
+def generate_list(projects, completed_projects):
     '''
     It generates a list from 'ProjectList.txt' which makes a list
     so that I can choose a random project from the list
 
     Parameters:
         projects - it is the list that holds the projects
+        completed_projects - it is the list that holds the completed projects
 
     Returns:
-        None
+        None - It adds the projects to the available or completed list of projects
     '''
     try:
         with open("ProjectRandomizer/ProjectLists.txt", "r") as text_file:
             for line in text_file:
                 projects.append(line.strip())
+        with open("ProjectRandomizer/CompletedProjectLists.txt", "r") as text:
+            for line in text:
+                completed_projects.append(line.strip())
     except:
-        text_file = open("ProjectLists.txt", "x")
+        print("File unavailable")
 
 def add(projects):
     '''
@@ -74,12 +78,33 @@ def display_random_project(projects):
         None
     '''
     print(random.choice(projects))
+def completed(projects, add_project, date):
+    '''
+    Writes the completed project to 'CompletedProjectLists.txt'
+    Also appends the completed project to the completed projects list
+
+    Parameters:
+        projects - the list of completed projects that it appends the projects and date to
+        add_project - the project that gets added to the projects list
+        date - the date that the project was completed
+
+    Returns:
+        None
+    '''
+    try:
+        with open("ProjectRandomizer/CompletedProjectLists.txt", "a") as text_file:
+            text_file.write(add_project.title() + " | " + date + "\n")
+            projects.append(add_project.title() + " | " + date)
+    except:
+        with open("CompletedProjectLists.txt", "x") as text_file:
+            text_file.write(add_project.title() + " | " + date + "\n")
 
 def main():
     projects = []
-    generate_list(projects)
+    completed_projects = []
+    generate_list(projects, completed_projects)
     while True:
-        print("1) Add to the list of projects\n2) Remove from list of projects\n3) Choosing random project\n4) Displays the projects\n5) Break the loop")
+        print("1) Add to the list of projects\n2) Remove from list of projects\n3) Choosing random project\n4) Displays the projects\n5) Complete a project\n6) Break the loop")
         try:
             num = int(input("Enter the number: "))
         except:
@@ -87,17 +112,28 @@ def main():
             continue
         match num:
             case 1:
-                print(projects)
                 add(projects)
             case 2:
-                print(projects)
                 remove_line = input("Enter what you want to remove: ")
                 removes(remove_line, projects)
             case 3:
                 display_random_project(projects)
+                input("Press Enter to continue: ")
             case 4:
-                print(projects)
+                choice = input("Would you like to see available projects or completed projects A/C: ")
+                if choice.lower() == 'a':
+                    print(projects)
+                elif choice.lower() == 'c':
+                    print(completed_projects)
+                else:
+                    print("Unavailable\n")
+                input("Press Enter to continue: ")
             case 5:
+                print(projects)
+                project = input("What project did you complete? ")
+                date = input("What's today's date? ")
+                completed(completed_projects, project, date)
+            case 6:
                 break
 
 main()
