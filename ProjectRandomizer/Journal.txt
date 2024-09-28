@@ -5,4 +5,7 @@ This is a journal to document me making each project:
             (Created this txt file on 9/28/2024 so not much to say here, just here to document when I made this)
 
 9/28/2024 - Created additional functions like completed so I can complete projects with dates on when I completed them
+            Today's Project: Personal Finance Tracker (How do I that actually)
+            Did a lot of research on Finance and wrote down notes on what do add to my FinanceTracker
+            I started writing down the code like the basics like getIncome or setIncome those things
             
