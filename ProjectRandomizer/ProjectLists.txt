@@ -1,7 +1,6 @@
 Calculator
 Blackjack
 Small Game
-Personal Finance Tracker
 To-Do List
 Weather App
 Web Scraper
