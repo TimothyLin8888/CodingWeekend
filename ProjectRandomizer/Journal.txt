@@ -9,3 +9,7 @@ This is a journal to document me making each project:
             Did a lot of research on Finance and wrote down notes on what do add to my FinanceTracker
             I started writing down the code like the basics like getIncome or setIncome those things
             
+9/29/2024 - Did majority of the FinanceTracker and got rid of lots of things like getIncome and added getDescription
+            and getDate since that's used more. I mainly used this project to practice using OOP. Of course it could
+            be perfected more. I really didn't want this as one of the very first ones I'll be honest but probablity
+            said otherwise.
