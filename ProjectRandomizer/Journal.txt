@@ -17,3 +17,7 @@ This is a journal to document me making each project:
 10/5/2024-10/6/2024 - Didn't work on coding weekend due to Data Structures Project.
 
 10/11/2024-10/12/2024 - Didn't work on coding weekend, fall break so I wanted to focus on a bigger project for the longer break.
+
+10/19/2024 - Got create a Weather App. I got the key for a Weather API and started learning on how to actually use the API.
+             I watched a YouTube video on how it works and got great results so far. I will continue to do it in order to make a
+             better Weather App.
