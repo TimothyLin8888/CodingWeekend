@@ -6,3 +6,4 @@ Weather App
 Web Scraper
 Password Manager
 Flashcards
+Pokemon Api

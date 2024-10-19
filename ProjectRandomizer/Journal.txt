@@ -13,3 +13,7 @@ This is a journal to document me making each project:
             and getDate since that's used more. I mainly used this project to practice using OOP. Of course it could
             be perfected more. I really didn't want this as one of the very first ones I'll be honest but probablity
             said otherwise.
+
+10/5/2024-10/6/2024 - Didn't work on coding weekend due to Data Structures Project.
+
+10/11/2024-10/12/2024 - Didn't work on coding weekend, fall break so I wanted to focus on a bigger project for the longer break.
