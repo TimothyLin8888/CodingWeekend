@@ -21,3 +21,5 @@ This is a journal to document me making each project:
 10/19/2024 - Got create a Weather App. I got the key for a Weather API and started learning on how to actually use the API.
              I watched a YouTube video on how it works and got great results so far. I will continue to do it in order to make a
              better Weather App.
+
+10/20/2024 - Created a cool while loop to be able to choose on what to see.
