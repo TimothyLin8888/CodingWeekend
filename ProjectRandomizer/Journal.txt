@@ -22,4 +22,7 @@ This is a journal to document me making each project:
              I watched a YouTube video on how it works and got great results so far. I will continue to do it in order to make a
              better Weather App.
 
-10/20/2024 - Created a cool while loop to be able to choose on what to see.
+10/20/2024 - Created a cool while loop to be able to choose on what to see. I put more into the weather app so that I could have 
+             the wind directions and have have the temperature changes if you want F or C. It is an interesting in how APIs work.
+             I found this one to be more fun due to having not make it look so basic. Though it is pretty basic, I like this better
+             than the Java Personal Finance Tracker so much more.

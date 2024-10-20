@@ -2,7 +2,6 @@ Calculator
 Blackjack
 Small Game
 To-Do List
-Weather App
 Web Scraper
 Password Manager
 Flashcards
