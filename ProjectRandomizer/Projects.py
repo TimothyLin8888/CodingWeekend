@@ -1,8 +1,7 @@
 import random
-import time;
-# from pydub import AudioSegment
-# from pydub.playback import play
-# import os
+import time
+import pygame
+
 def generate_list(projects, completed_projects):
     '''
     It generates a list from 'ProjectList.txt' which makes a list
@@ -82,12 +81,14 @@ def display_random_project(projects):
         None
     '''
     countdown = 5
-    # file_path = 'ProjectRandomizer/SlotMachine.mp3'
+    file_path = 'ProjectRandomizer/SlotMachine.mp3'
+    pygame.mixer.init()
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play()
     while countdown > 0:
         print(countdown)
         countdown -= 1
         time.sleep(1)
-
     print(random.choice(projects))
 def completed(projects, add_project, date):
     '''
@@ -130,6 +131,7 @@ def main():
             case 3:
                 display_random_project(projects)
                 input("Press Enter to continue: ")
+                pygame.mixer.music.stop()
             case 4:
                 choice = input("Would you like to see available projects or completed projects A/C: ")
                 if choice.lower() == 'a':
