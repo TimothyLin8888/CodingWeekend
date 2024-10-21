@@ -1,4 +1,8 @@
 import random
+import time;
+# from pydub import AudioSegment
+# from pydub.playback import play
+# import os
 def generate_list(projects, completed_projects):
     '''
     It generates a list from 'ProjectList.txt' which makes a list
@@ -77,6 +81,13 @@ def display_random_project(projects):
     Returns:
         None
     '''
+    countdown = 5
+    # file_path = 'ProjectRandomizer/SlotMachine.mp3'
+    while countdown > 0:
+        print(countdown)
+        countdown -= 1
+        time.sleep(1)
+
     print(random.choice(projects))
 def completed(projects, add_project, date):
     '''
