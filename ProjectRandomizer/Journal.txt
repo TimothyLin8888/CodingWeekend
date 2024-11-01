@@ -26,3 +26,7 @@ This is a journal to document me making each project:
              the wind directions and have have the temperature changes if you want F or C. It is an interesting in how APIs work.
              I found this one to be more fun due to having not make it look so basic. Though it is pretty basic, I like this better
              than the Java Personal Finance Tracker so much more.
+
+10/26/2024 - Participated in a Lucid Programming Competition so no time to do programmming
+
+10/27/2024 - Was working on a Data Structures Project so I also had no time on this day too. But I will next weekend.
