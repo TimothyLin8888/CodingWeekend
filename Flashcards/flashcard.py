@@ -116,9 +116,37 @@ def start_flashcards(file_path):
             if quit == "quit":
                 break
             print(f"Answer: {card['answer']}\n")
+def reverse_questions_and_answers(file_path):
+    '''
+    This reverses the questions and answers in case
+    you put it into quizlet in the other way like I did.
+    Quizlet has a feature to review by term or definition
+    so if you want to review a way, you will reverse the txt file
+    here.
+
+    Parameters:
+        file_path - the file path that it writes into
+    
+    Returns:
+        None
+    '''
+    reversed_flashcards = []
+
+    # Load and reverse the flashcards
+    with open(file_path, "r") as file:
+        for line in file:
+            # Split the line by the delimiter
+            answer, question = line.strip().split('->', 1)
+            reversed_flashcards.append(f"{question.strip()}->{answer.strip()}")  # Reverse the order
+
+    # Write the reversed flashcards to the output file
+    with open(file_path, "w") as file:
+        for flashcard in reversed_flashcards:
+            file.write(f"{flashcard}\n")
+
 def main():
     while True:
-        print("1) Create Flashcards\n2) Add Flashcards\n3) Edit Flashcards\n4) Start Flashcards\n5) Break")
+        print("1) Create Flashcards\n2) Add Flashcards\n3) Edit Flashcards\n4) Start Flashcards\n5) Reverse the Flashcard's terms and definitions\n6) Break")
         try:
             num = int(input("Enter the number: "))
         except:
@@ -146,6 +174,12 @@ def main():
                 start_flashcards(file_path)
                 continue
             case 5:
+                file = input("What file would you like to reverse or type 'quit' to cancel: ")
+                if file.lower() == 'quit':
+                    continue
+                file_path = f"Flashcards/{file}"
+                reverse_questions_and_answers(file_path)
+            case 6:
                 break
 
 

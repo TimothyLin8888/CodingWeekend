@@ -33,4 +33,5 @@ This is a journal to document me making each project:
 
 11/2/2024  - The Randomizer chose Flashcards. I played out on how I can implement the flashcards in the way I think I can make it work.
 
-11/3/2024  - 
+11/3/2024  - I implemented the Flashcards. I made it so you can create/add/edit/start flashcards. I put in my own presidents flashcards I made
+             back in 2021. I made it so you have the ability to quit out of the flashcards at anytime.
