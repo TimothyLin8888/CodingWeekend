@@ -35,3 +35,5 @@ This is a journal to document me making each project:
 
 11/3/2024  - I implemented the Flashcards. I made it so you can create/add/edit/start flashcards. I put in my own presidents flashcards I made
              back in 2021. I made it so you have the ability to quit out of the flashcards at anytime.
+             This one is the my favorite assignment I assigned myself this coding weekend. It made me think on how I want to do things.
+             I spent a day to figure out how I was going to do it and I got everything I wanted in it.
