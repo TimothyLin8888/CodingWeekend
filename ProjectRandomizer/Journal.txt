@@ -30,3 +30,7 @@ This is a journal to document me making each project:
 10/26/2024 - Participated in a Lucid Programming Competition so no time to do programmming
 
 10/27/2024 - Was working on a Data Structures Project so I also had no time on this day too. But I will next weekend.
+
+11/2/2024  - The Randomizer chose Flashcards. I played out on how I can implement the flashcards in the way I think I can make it work.
+
+11/3/2024  - 
