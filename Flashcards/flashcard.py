@@ -1,4 +1,16 @@
-def load_flashcards(file_path, flashcards):
+import random
+def load_flashcards(file_path):
+    '''
+    Loads the flashcards into the flashcards list.
+
+    Parameters:
+        file_path - the file path that it accesses.
+        flashcards - the list of flashcards it loads.
+
+    Returns:
+        flashcards - so it can load it into the list.
+    '''
+    flashcards = []
     with open(file_path, "r") as file:
         for line in file:
             question, answer = line.strip().split('->', 1)  # Split by comma, only once
@@ -6,6 +18,15 @@ def load_flashcards(file_path, flashcards):
     return flashcards
 
 def create_flashcards(file_path):
+    '''
+    Creates the flashcards into a file.
+
+    Parameters:
+        file_path - the file path that it writes into
+    
+    Returns:
+        None
+    '''
     with open(file_path, "w") as file:
         while True:
             question = input("Enter your question or Quit: ")
@@ -16,6 +37,15 @@ def create_flashcards(file_path):
 
 
 def add_flashcards(file_path):
+    '''
+    Adds the flashcards into the speicfied file.
+
+    Parameters:
+        file_path - the file path that it writes into
+    
+    Returns:
+        None
+    '''
     with open(file_path, "a") as file:
         while True:
             question = input("Enter your question or Quit: ")
@@ -25,6 +55,15 @@ def add_flashcards(file_path):
             file.write(f"{question}->{answer}\n")
 
 def edit_flashcards(file_path):
+    '''
+    Edits the flashcards in case of mistakes in typing.
+
+    Parameters:
+        file_path - the file path that it writes into
+    
+    Returns:
+        None
+    '''
     flashcards = []
     load_flashcards(file_path, flashcards)
     for i, flashcard in enumerate(flashcards):
@@ -49,9 +88,35 @@ def edit_flashcards(file_path):
         print("Please enter a valid number.")
 
 def start_flashcards(file_path):
-    pass
+    '''
+    It starts the flashcards to review. You can do it in order or random
+
+    Parameters:
+        file_path - the file path that it writes into
+    
+    Returns:
+        None
+    '''
+    flashcards = load_flashcards(file_path)
+    choice = input("In order or random: order/rand: ")
+    if choice == "order":
+        for card in flashcards:
+            print(f"Question: {card['question']}")
+            quit = input("Press Enter to see the answer or quit: ")
+            # Display the answer
+            if quit == "quit":
+                break
+            print(f"Answer: {card['answer']}\n")
+    elif choice == "rand":
+        random.shuffle(flashcards)
+        for card in flashcards:
+            print(f"Question: {card['question']}")
+            quit = input("Press Enter to see the answer or quit: ")
+            # Display the answer
+            if quit == "quit":
+                break
+            print(f"Answer: {card['answer']}\n")
 def main():
-    flashcards = []
     while True:
         print("1) Create Flashcards\n2) Add Flashcards\n3) Edit Flashcards\n4) Start Flashcards\n5) Break")
         try:
@@ -60,22 +125,22 @@ def main():
             print("Enter a number please")
             continue
         match num:
-            case 1: #
+            case 1: # Create Flashcards
                 file = input("What file do you want to create: ")
                 file_path = f"Flashcards/{file}"
                 create_flashcards(file_path)
                 continue
-            case 2:
+            case 2: # Add Flashcards
                 file = input("What file do you want to go into: ")
                 file_path = f"Flashcards/{file}"
                 add_flashcards(file_path)
                 continue
-            case 3:
+            case 3: # Edit Flashcards
                 file = input("What file do you want to go into: ")
                 file_path = f"Flashcards/{file}"
                 edit_flashcards(file_path)
                 continue
-            case 4:
+            case 4: # Start Flashcards
                 file = input("What file do you want to go into: ")
                 file_path = f"Flashcards/{file}"
                 start_flashcards(file_path)
