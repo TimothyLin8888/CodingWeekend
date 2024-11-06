@@ -33,7 +33,7 @@
 33rd President (1945-1953)->Harry S. Truman
 34th President (1953-1961)->Dwight D. Eisenhower
 35th President (1961-1963)->John F. Kennedy
-36th President (1963-1969)->Lydon B. Johnson
+36th President (1963-1969)->Lyndon B. Johnson
 37th President (1969-1974)->Richard Nixon
 38th President (1974-1977)->Gerald R. Ford
 39th President (1977-1981)->Jimmy Carter
@@ -43,4 +43,5 @@
 43rd President (2001-2009)->George W. Bush
 44th President (2009-2017)->Barack Obama
 45th President (2017-2021)->Donald Trump
-46th President (2021-Present)->Joe Biden
+46th President (2021-2024)->Joe Biden
+47th President (2024-Present)->Donald Trump
