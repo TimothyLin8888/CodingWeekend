@@ -1,0 +1,20 @@
+Q1: What is a Binary Tree in Java? -> A Binary Tree is a hierarchical data structure where each node has at most two children, referred to as the left and right children.
+Q2: What is a root node in a Binary Tree? -> The root node is the topmost node in a binary tree, which does not have a parent node.
+Q3: What are the children of a node in a Binary Tree? -> The children of a node are the nodes directly connected to it, where each node can have up to two children: left and right.
+Q4: What is a leaf node in a Binary Tree? -> A leaf node is a node in a binary tree that does not have any children.
+Q5: What is the difference between a full Binary Tree and a complete Binary Tree? -> A full Binary Tree is one where every node has either 0 or 2 children, whereas a complete Binary Tree is one where all levels, except possibly the last, are completely filled, and all nodes are as far left as possible.
+Q6: How do you traverse a Binary Tree in Java? -> A Binary Tree can be traversed in three main ways: inorder (left, root, right), preorder (root, left, right), and postorder (left, right, root).
+Q7: What is the depth of a Binary Tree? -> The depth of a binary tree is the number of edges on the longest path from the root to a leaf.
+Q8: What is the height of a Binary Tree? -> The height of a binary tree is the number of edges on the longest path from the root to a leaf, similar to the depth.
+Q9: What is a Binary Search Tree (BST)? -> A Binary Search Tree is a binary tree where for every node, the left child's key is less than the node's key, and the right child's key is greater than the node's key.
+Q10: How do you insert a node into a Binary Search Tree? -> To insert a node into a BST, you compare the node's key with the current node's key, and if it's smaller, go left; if larger, go right, until an empty spot is found.
+Q11: How do you search for a value in a Binary Search Tree? -> To search for a value in a BST, start from the root and traverse left or right based on whether the search value is smaller or larger than the current node's value.
+Q12: What is the inorder traversal of a Binary Tree? -> In inorder traversal, the left subtree is visited first, then the current node, and finally the right subtree.
+Q13: What is the preorder traversal of a Binary Tree? -> In preorder traversal, the current node is visited first, then the left subtree, followed by the right subtree.
+Q14: What is the postorder traversal of a Binary Tree? -> In postorder traversal, the left subtree is visited first, then the right subtree, and finally the current node.
+Q15: How do you delete a node from a Binary Search Tree? -> To delete a node in a BST, you have three cases: 1) The node is a leaf, just remove it. 2) The node has one child, replace it with its child. 3) The node has two children, replace it with its in-order successor or predecessor.
+Q16: What is a balanced Binary Tree? -> A balanced Binary Tree is a binary tree where the difference in height between the left and right subtrees of any node is at most 1.
+Q17: What is the time complexity of searching in a Binary Search Tree? -> The time complexity of searching in a Binary Search Tree is O(h), where h is the height of the tree. In the worst case, it could be O(n) for a degenerate tree (a tree that behaves like a linked list).
+Q18: What is a binary tree rotation? -> A binary tree rotation is an operation that changes the structure of the tree without changing its in-order traversal. Rotations are used to maintain balance in self-balancing binary trees like AVL and Red-Black trees.
+Q19: What is an AVL tree? -> An AVL tree is a self-balancing binary search tree where the difference between the heights of the left and right subtrees of any node is at most 1.
+Q20: What is a Red-Black tree? -> A Red-Black tree is a self-balancing binary search tree with an additional property of color-coding nodes (red or black) to ensure balance with specific rules, improving insertion and deletion performance.

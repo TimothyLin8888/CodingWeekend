@@ -13,7 +13,7 @@ def load_flashcards(file_path):
     flashcards = []
     with open(file_path, "r") as file:
         for line in file:
-            question, answer = line.strip().split('->', 1)  # Split by comma, only once
+            question, answer = line.strip().split('->', 1)  # Split by arrow, only once
             flashcards.append({"question": question, "answer": answer})
     return flashcards
 

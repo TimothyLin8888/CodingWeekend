@@ -1,0 +1,20 @@
+Q1: What is a pointer in C? -> A pointer is a variable that stores the memory address of another variable.
+Q2: How do you declare a pointer in C? -> You declare a pointer using the asterisk (*) symbol, e.g., `int *ptr;` for a pointer to an integer.
+Q3: How do you assign a value to a pointer? -> You assign a pointer the address of a variable using the address-of operator (`&`), e.g., `ptr = &var;`.
+Q4: What does the dereference operator (*) do? -> The dereference operator (`*`) is used to access the value at the address stored in the pointer.
+Q5: How do you dereference a pointer to access the value? -> You dereference a pointer by using the `*` operator, e.g., `int value = *ptr;` to get the value stored at the memory location pointed to by `ptr`.
+Q6: What does the address-of operator (&) do? -> The address-of operator (`&`) is used to get the memory address of a variable, e.g., `ptr = &var;`.
+Q7: What is a null pointer in C? -> A null pointer is a pointer that does not point to any valid memory location, often initialized as `NULL` or `0`.
+Q8: How do you initialize a pointer to null? -> A pointer can be initialized to null using `NULL`, e.g., `int *ptr = NULL;`.
+Q9: What is pointer arithmetic in C? -> Pointer arithmetic allows you to increment or decrement a pointer and access memory locations relative to the pointer's current position.
+Q10: What happens when you increment a pointer? -> When you increment a pointer, it points to the next element in the memory based on the type of data it points to (e.g., for an `int*`, it increments by `sizeof(int)`).
+Q11: What is a pointer to pointer in C? -> A pointer to pointer is a pointer that stores the address of another pointer, e.g., `int **ptr2;`.
+Q12: How do you access the value of a pointer to pointer? -> To access the value of a pointer to pointer, you use two dereference operators, e.g., `int value = **ptr2;`.
+Q13: What is the difference between a pointer and an array in C? -> A pointer stores a memory address, whereas an array is a contiguous block of memory with a fixed size and can be accessed by its name as a pointer to its first element.
+Q14: What is a function pointer in C? -> A function pointer is a pointer that stores the address of a function, allowing the function to be called indirectly.
+Q15: How do you declare a function pointer in C? -> A function pointer is declared by specifying the return type, followed by `(*ptr)` and the function signature, e.g., `int (*func_ptr)(int, int);` for a function pointer to a function that returns an `int` and takes two `int` arguments.
+Q16: How do you call a function using a function pointer? -> You can call a function using a function pointer by dereferencing the pointer and passing the arguments, e.g., `int result = (*func_ptr)(a, b);`.
+Q17: What is memory leak in the context of pointers? -> A memory leak occurs when dynamically allocated memory (using `malloc` or `calloc`) is not properly freed using `free()`, causing the program to lose access to the allocated memory.
+Q18: How do you dynamically allocate memory for a pointer? -> You dynamically allocate memory using `malloc()` or `calloc()`, e.g., `int *ptr = (int *)malloc(sizeof(int));`.
+Q19: How do you free dynamically allocated memory in C? -> You free dynamically allocated memory using the `free()` function, e.g., `free(ptr);`.
+Q20: What is the difference between `malloc()` and `calloc()`? -> `malloc()` allocates a block of memory without initializing it, while `calloc()` allocates memory and initializes it to zero.
