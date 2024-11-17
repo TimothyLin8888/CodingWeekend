@@ -37,3 +37,9 @@ This is a journal to document me making each project:
              back in 2021. I made it so you have the ability to quit out of the flashcards at anytime.
              This one is the my favorite assignment I assigned myself this coding weekend. It made me think on how I want to do things.
              I spent a day to figure out how I was going to do it and I got everything I wanted in it.
+
+11/16/2024 - On the randomizer, I got a calculator. I spent today experimenting tkinter since I have never used it before. I made a lot of progress.
+             I made tkinter_notes.py to help me figure out on how I can use it to make something. I started working on the calculator gui.
+
+11/17/2024 - I add the square root and exponents and made funny jokes for this calculator with a normal distribution that doesn't work. At some point I
+             This was a great practice for me to learn on how tkinter works so it wasn't a complete waste of time. This has been a really enjoyable process.
