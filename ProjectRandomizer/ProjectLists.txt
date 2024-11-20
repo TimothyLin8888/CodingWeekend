@@ -3,3 +3,6 @@ Small Game
 To-Do List
 Web Scraper
 Password Manager
+Wheel Spinner
+Tic Tac Toe
+Login System
