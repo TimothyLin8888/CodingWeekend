@@ -126,8 +126,10 @@ def main():
             case 1:
                 add(projects)
             case 2:
-                remove_line = input("Enter what you want to remove: ")
-                removes(remove_line, projects)
+                for i, proj in enumerate(projects):
+                    print(f"{i} - {proj}")
+                remove_num = int(input("Enter the number you want to remove: "))
+                removes(projects[remove_num], projects)
             case 3:
                 display_random_project(projects)
                 input("Press Enter to continue: ")
@@ -143,8 +145,8 @@ def main():
                 input("Press Enter to continue: ")
             case 5:
                 print(projects)
-                project = input("What project did you complete? ")
-                date = input("What's today's date? ")
+                project = input("What project number did you complete? ")
+                date = input("What's today's date? MM/DD?YYYY ")
                 completed(completed_projects, project, date)
             case 6:
                 break
