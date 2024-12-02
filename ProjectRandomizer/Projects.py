@@ -66,7 +66,7 @@ def removes(remove_line, projects):
                 try:
                     projects.remove(remove_line.title())
                 except:
-                    print("It isn't removed for a reason")
+                    print("That isn't a project")
             f.truncate()
     except:
         print("Can't read the file")
@@ -126,7 +126,7 @@ def main():
             case 1:
                 add(projects)
             case 2:
-                for i, proj in enumerate(projects):
+                for i, proj in enumerate(projects):  # Displays list of projects to be removed from list
                     print(f"{i} - {proj}")
                 remove_num = int(input("Enter the number you want to remove: "))
                 removes(projects[remove_num], projects)
@@ -144,8 +144,17 @@ def main():
                     print("Unavailable\n")
                 input("Press Enter to continue: ")
             case 5:
-                print(projects)
-                project = input("What project number did you complete? ")
+                for i, proj in enumerate(projects):  # Displays list of projects to be removed from list
+                    print(f"{i} - {proj}")
+                projectInList = input("Is your project in the list? Y/N ")
+                if projectInList.upper() == 'Y':
+                    project_num = int(input("What project number did you complete? "))
+                    project = projects[project_num]
+                elif projectInList.upper() == 'N':
+                    project = input("What project did you complete? ")
+                else:
+                    print("Neither Y or N")
+                    break
                 date = input("What's today's date? MM/DD?YYYY ")
                 completed(completed_projects, project, date)
             case 6:
